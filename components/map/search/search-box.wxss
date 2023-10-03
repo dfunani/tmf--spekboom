@@ -1,0 +1,36 @@
+.search-box{
+    width: 290px;
+    margin: auto;
+    height: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid gray 1px;
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+
+.search-box-input{
+    width: 100%;
+}
+
+.search-icon-glass{
+    width: 16px;
+    height: 16px;
+}
+
+.search-icon-x{
+    width: 24px;
+    height: 24px;
+}
+
+.search-text{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

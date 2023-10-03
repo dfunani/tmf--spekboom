@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/country/country",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "black",
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTitleText": "Spekboom",
+        "navigationBarTextStyle": "white"
+    },
+    "pageOrientation": "auto",
+    "resizable": true
+}

@@ -1,0 +1,17 @@
+<view class="nav-bar">
+    <image class="header-logo" catch:tap="navigateHome" src="../../public/images/spekboom-logo.png" />
+    <view class="header-dropdown" catch:tap="dropdownTap"> Destinations <image class="header-dropdown-arrow-down" src="../../public/images/arrow-down.svg" /> </view>
+    <view wx:if="{{modalClicked}}" class="dropdown-modal-destinations-container">
+        <view class="dropdown-modal-destinations-connector"></view>
+        <view class="dropdown-modal-destinations-body" wx:for="{{static[0].content}}" wx:for-item="country" wx:for-index="{{index}}" bind:tap="setCountrySelected" data-country="{{country}}" wx:key="{{index}}">{{country}}</view>
+    </view>
+    <view class="hamburger-destinations-container" catch:tap="expandHamburger">
+        <image class="hamburger-destinations" src="../../public/images/hamburger.svg" />
+        <view class="hamburger-modal-container" wx:if="{{authModal}}">
+            <view class="hamburger-modal-body" wx:if="{{!signedIn}}" catch:tap="signIn">Sign In</view>
+            <view class="hamburger-modal-body" wx:if="{{!signedIn}}" catch:tap="signOut">Sign Up</view>
+            <view class="hamburger-modal-body" wx:if="{{signedIn}}" catch:tap="signedOut">Sign Out</view>
+        </view>
+    </view>
+</view>
+

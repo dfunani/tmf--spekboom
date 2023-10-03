@@ -1,0 +1,7 @@
+<view class="search-box">
+        <image class="search-icon-glass" src="../../public/images/search.svg" />
+        <input class="search-box-input" type="text" placeholder="Search for places to stay..." />
+        <image class="search-icon-x" src="../../public/images/x.svg" />
+    </view>
+
+    <view class="search-text">Search: province, neighbourhood, place...</view>

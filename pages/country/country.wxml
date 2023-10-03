@@ -1,0 +1,29 @@
+<scroll-view class="container">
+    <include src="../../components/layout/header/header.wxml" />
+
+    <include src="../../components/layout/page-intro/page-intro.wxml" />
+
+    <include src="../../components/map/search/search-box.wxml" />
+
+    <map wx:if="{{isMap}}" ></map>
+    <view class="section-button"><button catch:tap="setFeatured">Featured Destinations</button> <button catch:tap="setMap">Hide Map</button></view>
+    <view class="image-card-container" wx:for="{{helpers.checkTags(static[0][header2].accomodations, isFeatured)}}" wx:for-item="country" wx:for-index="index" wx:key="{{index}}">
+        <image class="image-card-image-block" src="{{'../../public/images/' + country.logo}}" />
+        <view class="image-card-desc-block">
+            <view class="image-card-title"> {{country.name}} </view>
+            <view class="image-card-subtitle"> {{country.title}} </view>
+            <view class="image-card-tag-container">
+                <view wx:for="{{country.tags}}" wx:for-item="country" wx:for-index="index" wx:key="{{index}}" class="image-card-tag"> {{country}} </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<include src="../../components/layout/footer/footer.wxml" />
+
+<wxs module="helpers">
+module.exports = {
+  checkTags: function(accomodations, isFeatured){
+    return !isFeatured ? accomodations.filter(accomodation => !accomodation.tags.some((elem, i, arr) => elem === "featured")) : accomodations
+  }
+}
+</wxs>

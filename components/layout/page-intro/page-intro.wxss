@@ -1,0 +1,58 @@
+.page-intro-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-intro-image {
+  width: 100%;
+  position: relative;
+}
+
+.page-intro-overlay {
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 15%;
+}
+
+.page-intro-overlay-header1 {
+  font-size: 16px;
+  letter-spacing: 0.4rem;
+  margin: 16px 0px 8px;
+  text-shadow: 1px 0px 10px black;
+}
+
+.page-intro-overlay-header2 {
+  font-size: 43.2px;
+  font-weight: bolder;
+  text-shadow: 1px 0px 10px black;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.page-intro-overlay-header2::after{
+  background-color: pink;
+  content: "";
+  z-index: 3;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  bottom: 25%;
+}
+
+.page-intro-overlay-arrow {
+  z-index: 3;
+  width: 46px;
+  height: 46px;
+  text-shadow: 1px 0px 10px black;
+  color: white;
+}
+
+.page-intro-overlay-slogan {
+  z-index: 3;
+  text-shadow: 1px 0px 10px black;
+  color: white;
+  font-size: 16px;
+}

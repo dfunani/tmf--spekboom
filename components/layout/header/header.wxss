@@ -1,0 +1,98 @@
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px;
+  gap: 15px;
+  position: relative;
+}
+
+.header-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.header-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-modal-destinations-container {
+  position: absolute;
+  top: 100%;
+  width: auto;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.header-dropdown-arrow-down{
+  width: 12.5px;
+  height: 14.5px;
+}
+
+.dropdown-modal-destinations-connector {
+  width: 0;
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-bottom: 5px solid white;
+  position: absolute;
+  top: -5px;
+  left: 15%;
+}
+
+.dropdown-modal-destinations-body {
+  height: 100%;
+  padding: 10px;
+  align-self: flex-start;
+  margin-left: 10px;
+}
+
+
+.hamburger-destinations-container {
+  border-radius: 5px;
+  color: rgba(62, 61, 61, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+      padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid rgba(48, 47, 47, 0.1);
+    border-radius: 0.4rem;
+}
+
+.hamburger-destinations {
+  text-align: center;
+  width: 17.5px;
+  height: 20px;
+}
+
+.hamburger-modal-container {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 3;
+  background-color: white;
+}
+
+.hamburger-modal-body {
+  text-align: start;
+  padding: 15px;
+  font-size: 14px;
+  color: #020101CC
+}
+

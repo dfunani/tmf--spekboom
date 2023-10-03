@@ -1,0 +1,117 @@
+.container {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.page-section-description-container {
+  padding: 20px;
+  margin-block: 30px;
+}
+
+.page-section-description-header {
+  font-size: 40px;
+  text-align: start;
+  color: #212529;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.page-section-description-para {
+  font-size: 16px;
+  text-align: start;
+  margin-top: 16px;
+  color: #868e96;
+}
+
+.page-section-redirect-header {
+  text-align: start;
+  font-size: 16px;
+  color: green;
+  font-weight: bolder;
+  padding-left: 8px;
+}
+
+.page-section-redirect-container {
+  padding: 20px;
+}
+.page-section-redirect-title {
+  text-align: start;
+  font-size: 24px;
+  font-weight: bolder;
+  padding-left: 8px;
+}
+.page-section-redirect-btn-more {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  margin-block: 8px;
+  color: #868e96
+}
+.page-section-redirect-btn-more-text {
+  font-size: 14px;
+}
+.page-section-redirect-btn-more-arrow {
+  width: 12px;
+  height: 14px;
+  color: black;
+}
+
+.page-image-block-container {
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-image-block-image {
+  border-radius: 10px;
+  margin: 8px;
+}
+
+.page-image-block-image-cropped {
+  border-radius: 10px;
+  width: 344px;
+  height: 137px;
+  margin: 8px;
+}
+.page-image-block-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.page-image-block-btn-arrow {
+  z-index: 3;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-90deg);
+}
+
+.page-image-block-title {
+  font-size: 24px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 1px 0px 10px black;
+  width: 80%;
+}
+
+.page-image-block-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+  gap: 5px;
+  align-self: flex-end;
+  text-shadow: 1px 0px 10px black;
+}

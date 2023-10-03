@@ -1,0 +1,21 @@
+<view class="footer-container">
+  <view class="footer-title"> SPEKBOOM </view>
+  <view class="footer-desc"> Discover Africa. Support local economies</view>
+
+  <view class="footer-icons-container">
+    <image src="../../public/images/facebook.svg" />
+    <image src="../../public/images/instagram.svg" />
+  </view>
+
+  <view class="footer-links-container" wx:for="{{static}}" wx:for-item="obj" wx:for-index="index" wx:key="{{index}}">
+    <view class="footer-links-header">{{obj.name}}</view>
+    <view wx:for="{{obj.content}}" wx:for-item="item" wx:for-index="i" wx:key="{{i}}">
+      <view class="footer-links-item">{{item}}</view>
+    </view>
+  </view>
+
+
+  
+
+</view>
+  <view class="footer-closer">© 2023, Spekboom. All rights reserved.</view>

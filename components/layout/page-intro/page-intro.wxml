@@ -1,0 +1,9 @@
+<view class="page-intro-container">
+    <image class="page-intro-image" src="../../public/images/home-page.png" />
+    <view class="page-intro-overlay">
+        <view class="page-intro-overlay-header1"> {{header1}} </view>
+        <view class="page-intro-overlay-header2"> {{header2}} </view>
+        <view class="page-intro-overlay-slogan" wx:if="{{slogan}}">{{sloganText}}</view>
+        <image wx:if="{{!slogan}}" catch:tap="scrollView" class="page-intro-overlay-arrow" src="../../public/images/chevron-down-o.svg" />
+    </view>
+</view>

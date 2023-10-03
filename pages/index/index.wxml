@@ -1,0 +1,95 @@
+<scroll-view class="container">
+  <include src="../../components/layout/header/header.wxml" />
+  <include src="../../components/layout/page-intro/page-intro.wxml" />
+  <view class="page-section-description-container">
+    <view class="page-section-description-header"> Discover & Stay in Africa </view>
+    <view class="page-section-description-para"> Spekboom allows you to book directly with hand-picked Guesthouses, Bed & Breakfasts, Safari Lodges, Boutique Hotels & more. </view>
+  </view>
+
+  <view class="page-image-block-container"  wx:for="{{static[0].content}}" wx:for-item="country" wx:for-index="index" wx:key="{{index}}">
+    <image data-country="{{country}}" data-slogan="{{static[0][country].slogan}}" data-title="SPEKBOOM" catch:tap="setCountrySelected" class="page-image-block-image-cropped" src='{{"../../public/images/" + static[0][country].logo}}' />
+    <view class="page-image-block-overlay">
+      <view class="page-image-block-title"> {{country}} </view>
+      <view data-country="{{country}}" data-slogan="{{static[0][country].slogan}}" data-title="SPEKBOOM" catch:tap="setCountrySelected" class="page-image-block-btn">
+        <view class="page-image-block-btn-text">Take me there</view>
+        <image class="page-image-block-btn-arrow" src="../../public/images/216762_thin_icon.png" />
+      </view>
+    </view>
+  </view>
+
+  <view class="page-section-redirect-container">
+    <view class="page-section-redirect-header uppercase">{{favorite.country}}</view>
+    <view class="page-section-redirect-title"
+      >Featured Accodomation
+      <view class="page-section-redirect-btn-more">
+        <view class="page-section-redirect-btn-more-text" data-country="{{favorite.country}}" data-title="SPEKBOOM" catch:tap="setCountrySelected">See more in {{favorite.country}}</view>
+        <image class="page-section-redirect-btn-more-arrow" data-country="{{favorite.country}}" data-title="SPEKBOOM" catch:tap="setCountrySelected" src="../../public/images/chevron-double-right.svg" />
+      </view>
+    </view>
+  </view>
+  <view class="page-image-block-container" wx:for="{{helpers.checkTags(static[0][favorite.country].accomodations, 'featured')}}" wx:for-item="accomodation" wx:for-index="index" wx:key="{{index}}">
+    <image class="page-image-block-image" src='{{"../../public/images/" + accomodation.logo }}'/>
+    <view class="page-image-block-overlay">
+      <view class="page-image-block-title"> {{accomodation.name}} </view>
+    </view>
+  </view>
+
+  <view class="page-section-redirect-container">
+    <view class="page-section-redirect-header uppercase">{{favorite.country}}</view>
+    <view class="page-section-redirect-title"
+      >Experience Scenic Living in a Cabin
+      <view class="page-section-redirect-btn-more">
+        <view class="page-section-redirect-btn-more-text" data-country="{{favorite.country}}" data-title="SPEKBOOM" catch:tap="setCountrySelected">See more in {{favorite.country}}</view>
+        <image class="page-section-redirect-btn-more-arrow" data-country="{{favorite.country}}" data-title="SPEKBOOM" catch:tap="setCountrySelected" src="../../public/images/chevron-double-right.svg" />
+      </view>
+    </view>
+  </view>
+
+  <view class="page-image-block-container" wx:for="{{helpers.checkTags(static[0][favorite.country].accomodations, 'cabin')}}" wx:for-item="accomodation" wx:for-index="index" wx:key="{{index}}">
+    <image class="page-image-block-image" src="{{'../../public/images/' + accomodation.logo}}" />
+    <view class="page-image-block-overlay">
+      <view class="page-image-block-title"> {{accomodation.name}} </view>
+    </view>
+  </view>
+
+  <view class="page-section-redirect-container">
+    <view class="page-section-redirect-header uppercase">{{favorite.country}}</view>
+    <view class="page-section-redirect-title"
+      >Explore the Klein Karoo
+      <view class="page-section-redirect-btn-more">
+        <view class="page-section-redirect-btn-more-text" data-country="{{favorite.country}}" data-title="SPEKBOOM" catch:tap="setCountrySelected">See more in {{favorite.country}}</view>
+        <image class="page-section-redirect-btn-more-arrow" data-country="{{favorite.country}}" data-title="SPEKBOOM" catch:tap="setCountrySelected" src="../../public/images/chevron-double-right.svg" />
+      </view>
+    </view>
+  </view>
+
+  <view class="page-image-block-container" wx:for="{{helpers.checkTags(static[0][favorite.country].accomodations, 'karoo')}}" wx:for-item="accomodation" wx:for-index="index" wx:key="{{index}}">
+    <image class="page-image-block-image" src="{{'../../public/images/' + accomodation.logo}}" />
+    <view class="page-image-block-overlay">
+      <view class="page-image-block-title"> {{accomodation.name}} </view>
+    </view>
+  </view>
+
+  <view class="page-section-redirect-container">
+    <view class="page-section-redirect-header uppercase">NEW DESTINATIONS</view>
+    <view class="page-section-redirect-title">Coming soon </view>
+  </view>
+
+  <view class="page-image-block-container" wx:for="{{helpers.checkTags(static[0][favorite.country].accomodations, 'comingsoon')}}" wx:for-item="accomodation" wx:for-index="index" wx:key="{{index}}">
+    <image class="page-image-block-image" src="{{'../../public/images/' + accomodation.logo}}" />
+    <view class="page-image-block-overlay">
+      <view class="page-image-block-title"> {{accomodation.name}} </view>
+    </view>
+  </view>
+
+  <include src="../../components/layout/footer/footer.wxml" />
+</scroll-view>
+
+
+<wxs module="helpers">
+module.exports = {
+  checkTags: function(accomodations, tag){
+    return accomodations.filter(accomodation => accomodation.tags.some((elem, i, arr) => elem === tag))
+  }
+}
+</wxs>
